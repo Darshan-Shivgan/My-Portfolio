@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Darshan Shivgan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home"><i class="fas fa-home"></i></a>
+            <a href="#about"><i class="fas fa-user"></i></a>
+            <a href="#skill"><i class="fas fa-briefcase"></i></a>
+            <a href="#project"><i class="fas fa-code"></i></a>
+            <a href="#contact"><i class="fas fa-envelope"></i></a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Darshan Shivgan</h1>
+                <h3>And I'm a <span class="text"></span></h3>
+                <p>I'm a web designer with expertise in creating modern and responsive websites.</p>
+                <div class="home-sci">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="javascript:void(0);" onclick="toggleAbout()" class="btn-box">About Me</a>
+
+                <!-- Slide toggle paragraph -->
+                <div id="aboutMeContent" class="about-toggle">
+                    <p>
+                        I am a dedicated BSC.IT student with a strong passion for technology and problem-solving. 
+                        I possess a solid foundation in software development, data analysis, and IT infrastructure. 
+                        Through my academic journey, I have gained hands-on experience with various programming languages and tools. 
+                        I have teamwork skills, which have helped me thrive in collaborative projects.
+                    </p>
+                </div>
+            </div>
+            <div class="profile-photo">
+                <img src="Darshan.jpeg" alt="image">
+            </div>            
+        </div>
+    </section>
+
+    <section id="skill">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <div class="circle" style="--percentage: 90;">
+                    <div class="skill-text">90%</div>
+                </div>
+                <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-box">
+                <div class="circle" style="--percentage: 95;">
+                    <div class="skill-text">95%</div>
+                </div>
+                <h3>HTML & CSS</h3>
+            </div>
+            <div class="skill-box">
+                <div class="circle" style="--percentage: 85;">
+                    <div class="skill-text">85%</div>
+                </div>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <div class="circle" style="--percentage: 80;">
+                    <div class="skill-text">80%</div>
+                </div>
+                <h3>Python</h3>
+            </div>
+        </div>
+    </section>
+      
+    <!-- Project section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1">
+                <h3>Online Car Showroom</h3>
+                <p>A front-end website for an online car showroom with modern UI/UX.</p>
+                <a href="#" class="btn-box">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Gesture-Controlled Gloves</h3>
+                <p>An IoT project to control devices using hand gestures.</p>
+                <a href="#" class="btn-box">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="Project3.jpeg" alt="Project 3">
+                <h3>Smart Vacuum cleaner</h3>
+                <p>A prototype for a smart military defense robot with AI capabilities.</p>
+                <a href="#" class="btn-box">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section-->
+    <section id="blog">
+        <h2 class="section-title">My Blog</h2>
+        <div class="blog-container">
+            <div class="blog-box">
+                <img src="blog-image1.jpg" alt="Blog Image">
+                <div class="blog-content">
+                    <h3>Blog Title 1</h3>
+                    <p class="blog-date">March 23, 2025</p>
+                    <p class="blog-description">This is a short description of the blog post. It gives a quick insight into the topic covered.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form action="contact.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-box">Send Message</button>
+            </form>
+        </div>
+    </section> 
+
+    <!-- Typed.js Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var typed = new Typed(".text", {
+                strings: ["Frontend Developer", "Web Developer", "Tech Enthusiast"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                backDelay: 1000,
+                loop: true
+            });
+        });
+
+        function toggleAbout() {
+            const aboutDiv = document.getElementById("aboutMeContent");
+            aboutDiv.classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>

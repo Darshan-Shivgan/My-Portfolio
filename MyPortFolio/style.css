@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #000; /* Changed to pure black */
+}
+
+/* Header Styling */ 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Navigation Bar */
+.navbar a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+/* Home Section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10%;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.home-content h3 {
+    font-size: 28px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Slide Toggle CSS for About Me */
+.about-toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+
+.about-toggle.open {
+    max-height: 600px; /* Adjust as needed */
+}
+
+/* Typing Animation Effect */
+.text {
+    color: #0ef;
+    font-weight: bold;
+}
+
+/* Social Media Icons */
+.home-sci {
+    margin-top: 20px;
+}
+
+.home-sci a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px #0ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent stretching */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Contact Form */
+.contact-container {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.contact-container input,
+.contact-container textarea {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 2px solid #0ef;
+background: #222;
+color: #fff;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.contact-container textarea {
+height: 120px;
+resize: none;
+}
+
+/* Submit Button */
+.btn-box {
+display: inline-block;
+padding: 12px 28px;
+background: #0ef;
+border-radius: 40px;
+font-size: 16px;
+color: #081b29;
+text-decoration: none;
+font-weight: 600;
+margin-top: 20px;
+border: none;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn-box:hover {
+box-shadow: 0 0 5px cyan,
+0 0 25px cyan, 0 0 50px cyan,
+0 0 100px cyan, 0 0 200px cyan;
+}
+
+#skill {
+background: #111;
+padding: 50px 10%;
+text-align: center;
+}
+
+.section-title {
+font-size: 32px;
+font-weight: bold;
+color: #0ef;
+margin-bottom: 20px;
+}
+
+/* Skills Container */
+.skills-container {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.skill-box {
+text-align: center;
+width: 150px;
+}
+
+/* Circular Progress Bar */
+.circle {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+background: conic-gradient(#0ef calc(var(--percentage) * 3.6deg), #222 0deg);
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+box-shadow: 0 0 15px #0ef;
+}
+
+.circle::before {
+content: "";
+position: absolute;
+width: 90px;
+height: 90px;
+background: #111;
+border-radius: 50%;
+}
+
+.skill-text {
+position: relative;
+font-size: 20px;
+font-weight: bold;
+color: #fff;
+}
+
+#projects {
+background: #111;
+padding: 50px 10%;
+text-align: center;
+}
+.projects-container {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+.project-card {
+background: #222;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #0ef;
+text-align: center;
+width: 250px;
+}
+.project-card img {
+width: 100%;
+border-radius: 10px;
+}
+.project-card h3 {
+color: #0ef;
+margin-top: 10px;
+}
+.project-card p {
+font-size: 14px;
+color: #ddd;
+}
+.btn-box {
+display: inline-block;
+padding: 8px 20px;
+background: #0ef;
+border-radius: 5px;
+font-size: 14px;
+color: #081b29;
+text-decoration: none;
+font-weight: 600;
+margin-top: 10px;
+transition: 0.3s;
+}
+.btn-box:hover {
+background: #081b29;
+color: #0ef;
+box-shadow: 0 0 15px #0ef;
+}
+
+#blog {
+background: #111;
+padding: 50px 10%;
+text-align: center;
+}
+
+.section-title {
+font-size: 32px;
+font-weight: bold;
+color: #0ef;
+margin-bottom: 20px;
+}
+
+.blog-container {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.blog-box {
+background: #222;
+width: 300px;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 0 10px #0ef;
+transition: 0.3s;
+}
+
+.blog-box:hover {
+transform: scale(1.05);
+}
+
+.blog-box img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+.blog-content {
+padding: 15px;
+}
+
+.blog-date {
+font-size: 14px;
+color: #aaa;
+margin-bottom: 10px;
+}
+
+.blog-description {
+font-size: 16px;
+color: #ddd;
+margin-bottom: 10px;
+}
+
+.read-more {
+display: inline-block;
+padding: 8px 15px;
+background: #0ef;
+color: #081b29;
+font-weight: bold;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.read-more:hover {
+box-shadow: 0 0 10px cyan;
+}
